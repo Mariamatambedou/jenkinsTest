@@ -27,7 +27,7 @@ public class ProduitController {
         this.produitService = produitService;
     }
 
-    @PostMapping("/produit")
+    @PostMapping("/produite")
     public ResponseEntity<ProduitDTO> createProduit(@RequestBody ProduitDTO produitDTO) {
         ProduitDTO nouveauProduit = produitService.createProduit(produitDTO);
         return new ResponseEntity<>(nouveauProduit, HttpStatus.CREATED);
